@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoladorDeDados.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dado_icon.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                />
+
+            <Label
+                Text="Bem-Vindo ao Rolador de Dados!"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                />
+
+            <Label
+                x:Name="ResultadoRolagem"
+                Text=""
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                />
+
+            <Picker
+                x:Name="SidesPicker"
+                Title="Selecione a Quantidade de Lados"
+                WidthRequest="300"
+                >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>8</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+                x:Name="RollerBtn"
+                Text="Rolar Dados" 
+                Clicked="OnRollerClicked"
+                WidthRequest="300"
+                HorizontalOptions="Fill" 
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
