@@ -7,6 +7,14 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+
+            <Label
+               Text="Rolador de Dados!"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"
+                Margin="40"
+               />
+            
             <Image
                 Source="dado_icon.png"
                 HeightRequest="185"
@@ -28,7 +36,7 @@
 
             <Picker
                 x:Name="SidesPicker"
-                Title="Selecione a Quantidade de Lados"
+                Title="Escola seu tipo de dado:"
                 WidthRequest="300"
                 >
                 <Picker.ItemsSource>
@@ -49,6 +57,7 @@
                 Clicked="OnRollerClicked"
                 WidthRequest="300"
                 HorizontalOptions="Fill" 
+                BackgroundColor="BlueViolet"
                 />
         </VerticalStackLayout>
     </ScrollView>
